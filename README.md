@@ -1,4 +1,4 @@
-# Saga Falabella Test Automation Framework
+# OWASP Juice Shop Vulnerability Test Automation Framework with Selenium
 
 ### Content index
 
