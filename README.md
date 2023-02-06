@@ -49,7 +49,8 @@ por la [Universidad Cátolica Boliviana "San Pablo"](https://lpz.ucb.edu.bo/) de
 
 ### Gradle CommandLine List to Run Test to Terminal
 
-- Run single Test Class: gradle clean test --tests RegisterTest
+- Run single Test Class: `gradle clean test --tests RegisterTest`
+- Run All Test: `gradle clean test`
 
 ### XPATH Search Sample in the Chrome Console
 
