@@ -1,0 +1,11 @@
+.idea
+.gradle
+/gradle
+/target
+/build
+/resource/logs/**
+*.DS_Store
+out
+/src/test/resources/screenshots/**
+*.iml
+*.log
