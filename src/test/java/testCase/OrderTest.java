@@ -9,6 +9,7 @@ import session.Session;
 
 import static util.EnvConfig.HOST;
 
+@TestClassOrder(ClassOrderer.OrderAnnotation.class)
 public class OrderTest {
     HandlePage handlePage = new HandlePage();
     HomePage homePage = new HomePage();
