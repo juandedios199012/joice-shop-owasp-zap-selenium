@@ -10,7 +10,7 @@
 
 ### Descripción
 
-Proyecto Final de **Vulnerability Test** del 
+Proyecto Final de **Vulnerability Test** del
 **Diplomado Testing de Software**
 por la [Universidad Cátolica Boliviana "San Pablo"](https://lpz.ucb.edu.bo/) de Bolivia.
 
@@ -41,7 +41,7 @@ por la [Universidad Cátolica Boliviana "San Pablo"](https://lpz.ucb.edu.bo/) de
 - Singleton pattern for Json Test Data
 - Test Data Using Model Classes
 - Support Chrome
-- API Owasp ZAP - scan 
+- API Owasp ZAP - scan
 - API Owasp ZAP - status
 - API Owasp ZAP - scanProgress
 - API Owasp ZAP - htmlreport

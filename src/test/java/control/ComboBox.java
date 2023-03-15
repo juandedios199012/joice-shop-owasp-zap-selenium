@@ -9,7 +9,7 @@ public class ComboBox extends Control {
         super(locator);
     }
 
-    public void clickFirstSelectedValue(String value){
+    public void clickFirstSelectedValue(String value) {
         this.findControl();
         Select select = new Select(this.control);
         select.selectByValue(value);

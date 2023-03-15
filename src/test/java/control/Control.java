@@ -32,12 +32,25 @@ public class Control {
 
     public void click() {
         this.findControl();
+        //isVisibility2();
+        //isVisibility2(this.control);
         this.control.click();
+    }
+
+    public void clickJavascript() {
+        this.findControl();
+        JavascriptExecutor executor = (JavascriptExecutor)Session.getInstance().getBrowser();
+        executor.executeScript("arguments[0].click();", this.control);
     }
 
     public void selectElement(int index) {
         this.findControls();
         this.controls.get(index).click();
+    }
+
+    public String getTextElement() {
+        this.findControl();
+        return this.control.getText();
     }
 
     public boolean isControlDisplayed() {
@@ -61,9 +74,16 @@ public class Control {
         }
     }
 
-    public void moveToElement(){
+
+    public void isVisibility2() {
         this.findControl();
-        Actions act =  new Actions(Session.getInstance().getBrowser());
+        WebDriverWait wait = new WebDriverWait(Session.getInstance().getBrowser(), Duration.ofSeconds(120));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(this.locator));
+    }
+
+    public void moveToElement() {
+        this.findControl();
+        Actions act = new Actions(Session.getInstance().getBrowser());
         act.moveToElement(this.control).click().perform();
     }
 

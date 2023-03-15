@@ -6,7 +6,7 @@ public class Register {
 
     private final String email;
     private final String password;
-    //private final String repeatPassword;
+    private final int question;
     private final String answer;
 
     public Register() {
@@ -14,6 +14,7 @@ public class Register {
         email = faker.internet().emailAddress();
         password = faker.internet().password();
         answer = faker.name().name();
+        question=1;
     }
 
     public String getEmail() {
@@ -26,5 +27,9 @@ public class Register {
 
     public String getAnswer() {
         return answer;
+    }
+
+    public int getQuestion() {
+        return question;
     }
 }

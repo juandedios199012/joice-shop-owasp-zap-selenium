@@ -2,12 +2,12 @@ package model;
 
 public class Login {
 
-    private final String emailLogin;
-    private final String passwordLogin;
+    private String emailLogin;
+    private String passwordLogin;
 
     public Login() {
-        emailLogin = "user01@gmail.com";
-        passwordLogin = "A1B2C3D4";
+        // emailLogin = "user01@gmail.com";
+        //passwordLogin = "A1B2C3D4";
     }
 
     public String getEmailLogin() {

@@ -10,7 +10,7 @@ public class Card {
     public Card() {
         var faker = new Faker();
         name = faker.name().name();
-        cardNumber = faker.number().digits(16).replace('0','1');
+        cardNumber = faker.number().digits(16).replace('0', '1');
     }
 
     public String getName() {

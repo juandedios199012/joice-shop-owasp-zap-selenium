@@ -2,15 +2,11 @@ package task;
 
 import helper.JsonTestDataHelper;
 import model.Register;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Actions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.RegisterPage;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import session.Session;
 
 public class AddUser {
@@ -23,41 +19,44 @@ public class AddUser {
     Register register = new Register();
 
     public void withTheData() {
-        goToRegister();
+        logger.info("Se encuentra en la Clase: "+getClass().getName());
 
         logger.info("Email ingresado");
-        registerPage.emailTxtBox.setText("user04@gmail.com");
+        registerPage.emailTxtBox.isVisibility();
+        registerPage.emailTxtBox.setText(register.getEmail());
 
         logger.info("Password ingresada");
-        registerPage.passwordTxtBox.setText("A1B2C3D4");
+        registerPage.passwordTxtBox.setText(register.getPassword());
 
         logger.info("Confirmar password");
-        registerPage.repeatPasswordTxtBox.setText("A1B2C3D4");
+        registerPage.repeatPasswordTxtBox.setText(register.getPassword());
 
         logger.info("Click en Security Question");
         registerPage.selectElement.click();
 
         logger.info("Seleccionar Security Question");
-        registerPage.securityQuestionCboBox.selectElement(1);
+        registerPage.securityQuestionCboBox.selectElement(register.getQuestion());
 
         logger.info("Respuesta ingresada");
         registerPage.answerTxtBox.setText(register.getAnswer());
-        //Thread.sleep(5000);
 
         registerPage.registerButton.isVisibility();
         logger.info("Click en el Boton Registrar");
         registerPage.registerButton.click();
     }
+
     public void goToRegister() {
         logger.info("Click en el Boton Account");
+        homePage.navbarAccount.isVisibility();
         homePage.navbarAccount.click();
 
         logger.info("Click en el Boton Login");
         homePage.navigateTologinButton.click();
 
         Session.getInstance().getBrowser().navigate().refresh();
-        //Thread.sleep(7000);
+
         logger.info("Click en el Boton customer");
         loginPage.newCustomerLink.click();
     }
+
 }
