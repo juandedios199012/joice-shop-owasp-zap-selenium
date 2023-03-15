@@ -12,8 +12,8 @@ public class CreateAddressPage {
     public TextBox addressTxtBox = new TextBox(By.id("address"));
     public TextBox cityTxtBox = new TextBox(By.cssSelector("input[placeholder='Please provide a city.']"));
     public TextBox stateTxtBox = new TextBox(By.cssSelector("input[placeholder='Please provide a state.']"));
-    public Button submitAddressButton = new Button(By.id("submitButton"));
-
+    public Button submitAddressButton = new Button(By.cssSelector("button[id='submitButton']"));
+    public Button closeToast = new Button(By.cssSelector(".mat-button-wrapper"));
     public CreateAddressPage() {
     }
 
