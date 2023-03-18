@@ -31,9 +31,9 @@ public class AddProduct {
             productsPage.closeToast.clickJavascript();
         }
 
-        //Thread.sleep(5000);
         logger.info("Click en el Boton checkout");
         basketPage.checkoutButton.isVisibility();
+        basketPage.checkoutButton.isControlDisplayed();
         basketPage.checkoutButton.clickJavascript();
     }
 }
