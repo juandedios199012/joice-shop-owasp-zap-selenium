@@ -8,6 +8,7 @@ import task.AddUser;
 
 import static util.EnvConfig.HOST;
 
+@TestClassOrder(value = ClassOrderer.OrderAnnotation.class)
 public class RegisterTest {
     HandlePage handlePage = new HandlePage();
     LoginPage loginPage = new LoginPage();
@@ -21,7 +22,7 @@ public class RegisterTest {
     }
 
     @Test
-    @Order(1)
+    @Order(value = 1)
     public void RegisterTest() {
         addUser.withTheData();
         Assertions.assertTrue(loginPage.emailTxtBox.isControlDisplayed(), "ERROR no se registro");

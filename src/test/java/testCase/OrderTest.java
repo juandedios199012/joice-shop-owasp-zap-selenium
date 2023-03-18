@@ -8,7 +8,7 @@ import task.*;
 
 import static util.EnvConfig.HOST;
 
-@TestClassOrder(ClassOrderer.OrderAnnotation.class)
+@TestClassOrder(value = ClassOrderer.OrderAnnotation.class)
 public class OrderTest {
     OrderSummaryPage orderSummaryPage = new OrderSummaryPage();
     OrderCompletionPage orderCompletionPage = new OrderCompletionPage();
@@ -25,7 +25,7 @@ public class OrderTest {
     }
 
     @Test
-    @Order(2)
+    @Order(value = 2)
     public void OrdenTest(){
         addProduct.withTheData();
         address.withTheData();
