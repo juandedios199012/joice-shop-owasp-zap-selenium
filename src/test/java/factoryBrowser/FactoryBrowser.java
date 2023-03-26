@@ -5,16 +5,10 @@ public class FactoryBrowser {
     public static IBrowser make(String browserType) {
         IBrowser browser;
 
-        switch (browserType.toLowerCase()) {
-            case "chrome":
-                browser = new Chrome();
-                break;
-            case "proxy":
-                browser = new ChromeProxy();
-                break;
-            default:
-                browser = new Firefox();
-                break;
+        if ("chrome".equals(browserType.toLowerCase())) {
+            browser = new Chrome();
+        } else {
+            browser = new ChromeProxy();
         }
         return browser;
     }

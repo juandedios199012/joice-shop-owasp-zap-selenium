@@ -8,7 +8,7 @@ public class Session {
     private WebDriver browser;
 
     private Session() {
-        browser = FactoryBrowser.make("chrome").create();
+        browser = FactoryBrowser.make("proxy").create();
     }
 
     public static Session getInstance() {

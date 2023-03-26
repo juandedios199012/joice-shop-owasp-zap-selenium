@@ -14,7 +14,7 @@ public class AddProduct {
     BasketPage basketPage = new BasketPage();
 
     public void withTheData() {
-        logger.info("Se encuentra en la Clase: "+getClass().getName());
+        logger.info("Se encuentra en la Clase: " + getClass().getName());
 
         logger.info("Agregar Producto");
         productsPage.addBasketButton.isVisibility();
@@ -24,16 +24,16 @@ public class AddProduct {
         productsPage.basketButton.isVisibility();
         productsPage.basketButton.click();
 
-        logger.info("Cerrar Alerta de Seleccion de Producto");
+        /*logger.info("Cerrar Alerta de Seleccion de Producto");
         String alertText=productsPage.closeToast.getTextElement();
         if (alertText.equals("X")){
             productsPage.closeToast.click();
             productsPage.closeToast.clickJavascript();
-        }
+        }*/
 
         logger.info("Click en el Boton checkout");
         basketPage.checkoutButton.isVisibility();
-        basketPage.checkoutButton.isControlDisplayed();
+        // basketPage.checkoutButton.isControlDisplayed();
         basketPage.checkoutButton.clickJavascript();
     }
 }

@@ -34,7 +34,7 @@ public class SignIn {
     }
 
     public void goToSignIn() {
-        logger.info("Se encuentra en la Clase: "+getClass().getName());
+        logger.info("Se encuentra en la Clase: " + getClass().getName());
 
         logger.info("Clic en cuadro de Bienvenida");
         handlePage.welcomeHandle.click();
