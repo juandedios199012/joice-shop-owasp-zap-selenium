@@ -16,12 +16,12 @@ public class AddAddress {
     Address address = new Address();
 
     public void withTheData() {
-        logger.info("Se encuentra en la Clase: "+getClass().getName());
+        logger.info("Se encuentra en la Clase: " + getClass().getName());
 
         logger.info("Cerrar Alerta de Seleccion de Producto");
         //productsPage.closeToast.isVisibility();
-        String alertText=createAddressPage.closeToast.getTextElement();
-        if (alertText.equals("X")){
+        String alertText = createAddressPage.closeToast.getTextElement();
+        if (alertText.equals("X")) {
             createAddressPage.closeToast.clickJavascript();
         }
 

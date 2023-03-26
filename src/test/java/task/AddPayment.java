@@ -14,7 +14,7 @@ public class AddPayment {
     Card card = new Card();
 
     public void withTheData() {
-        logger.info("Se encuentra en la Clase: "+getClass().getName());
+        logger.info("Se encuentra en la Clase: " + getClass().getName());
 
         logger.info("Click en Add new Card");
         paymentPage.addNewCard.isVisibility();
@@ -33,7 +33,8 @@ public class AddPayment {
         paymentPage.expiryMonthCboBox.clickFirstSelectedValue("1");
 
         logger.info("Seleccionar año de vencimiento");
-        paymentPage.selectElementYear.clickJavascript();;
+        paymentPage.selectElementYear.clickJavascript();
+        ;
         paymentPage.expiryYearCboBox.clickFirstSelectedValue("2080");
 
         logger.info("Click en el Boton Submit");

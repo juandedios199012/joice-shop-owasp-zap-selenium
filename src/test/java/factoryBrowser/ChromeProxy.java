@@ -17,6 +17,7 @@ public class ChromeProxy implements IBrowser {
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--proxy-server=" + OWASP_ZAP);
+        chromeOptions.addArguments("--remote-allow-origins=*");
 
         // esto es para el certificado ssl --> HTTPS
         chromeOptions.addArguments("ignore-certificate-errors");

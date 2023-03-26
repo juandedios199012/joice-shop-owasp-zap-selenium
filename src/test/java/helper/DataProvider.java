@@ -1,10 +1,6 @@
 package helper;
 
-import io.qameta.allure.internal.shadowed.jackson.core.JsonParseException;
 import io.qameta.allure.internal.shadowed.jackson.core.JsonProcessingException;
-import io.qameta.allure.internal.shadowed.jackson.databind.JsonMappingException;
-
-
 import io.qameta.allure.internal.shadowed.jackson.databind.ObjectMapper;
 import model.Login;
 
@@ -18,15 +14,15 @@ public class DataProvider {
 
     public Login getUserData() {
         try {
-            File file= new File("src/test/resources/json/user.json");
+            File file = new File("src/test/resources/json/user.json");
             Scanner myReader = new Scanner(file);
-            String data="";
+            String data = "";
             while (myReader.hasNextLine()) {
-                 data += myReader.nextLine();
+                data += myReader.nextLine();
             }
             myReader.close();
 
-            Login login  = objectMapper.readValue(data, Login.class);
+            Login login = objectMapper.readValue(data, Login.class);
             return login;
         } catch (JsonProcessingException | FileNotFoundException e) {
             e.printStackTrace();

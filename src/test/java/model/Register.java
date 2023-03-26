@@ -14,7 +14,7 @@ public class Register {
         email = faker.internet().emailAddress();
         password = faker.internet().password();
         answer = faker.name().name();
-        question=1;
+        question = 1;
     }
 
     public String getEmail() {

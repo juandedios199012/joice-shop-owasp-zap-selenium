@@ -13,6 +13,7 @@ public class Chrome implements IBrowser {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("lang=en-GB");
         chromeOptions.addArguments("--remote-allow-origins=*");
+
         ChromeDriver driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();

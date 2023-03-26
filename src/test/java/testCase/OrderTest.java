@@ -19,14 +19,14 @@ public class OrderTest {
     AddPayment addPayment = new AddPayment();
 
     @BeforeEach
-    public void openBrowser(){
+    public void openBrowser() {
         Session.getInstance().getBrowser().get(HOST);
         signIn.withTheData();
     }
 
     @Test
     @Order(value = 2)
-    public void OrdenTest(){
+    public void OrdenTest() {
         addProduct.withTheData();
         address.withTheData();
         addDelivery.withTheData();

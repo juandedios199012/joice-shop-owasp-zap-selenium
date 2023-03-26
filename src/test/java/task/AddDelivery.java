@@ -12,7 +12,7 @@ public class AddDelivery {
     DeliveryMethodPage deliveryMethodPage = new DeliveryMethodPage();
 
     public void withTheData() {
-        logger.info("Se encuentra en la Clase: "+getClass().getName());
+        logger.info("Se encuentra en la Clase: " + getClass().getName());
 
         logger.info("Metodo de Entrega Seleccionado");
         deliveryMethodPage.chooseDeliveryRadio.isVisibility();

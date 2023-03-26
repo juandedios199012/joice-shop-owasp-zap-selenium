@@ -39,7 +39,7 @@ public class Control {
 
     public void clickJavascript() {
         this.findControl();
-        JavascriptExecutor executor = (JavascriptExecutor)Session.getInstance().getBrowser();
+        JavascriptExecutor executor = (JavascriptExecutor) Session.getInstance().getBrowser();
         executor.executeScript("arguments[0].click();", this.control);
     }
 

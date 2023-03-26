@@ -19,7 +19,7 @@ public class AddUser {
     Register register = new Register();
 
     public void withTheData() {
-        logger.info("Se encuentra en la Clase: "+getClass().getName());
+        logger.info("Se encuentra en la Clase: " + getClass().getName());
 
         logger.info("Email ingresado");
         registerPage.emailTxtBox.isVisibility();
