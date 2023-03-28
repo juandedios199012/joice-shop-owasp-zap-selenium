@@ -51,6 +51,7 @@ por la [Universidad Cátolica Boliviana "San Pablo"](https://lpz.ucb.edu.bo/) de
 
 - Run single Test Class: `gradle clean test --tests RegisterTest`
 - Run All Test: `gradle clean test`
+- Run report : `allure serve build/allure-results`
 
 ### XPATH Search Sample in the Chrome Console
 

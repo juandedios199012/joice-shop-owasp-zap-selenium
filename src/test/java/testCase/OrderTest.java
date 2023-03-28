@@ -26,7 +26,7 @@ public class OrderTest {
 
     @Test
     @Order(value = 2)
-    public void OrdenTest() {
+    public void OrdenTest() throws InterruptedException {
         addProduct.withTheData();
         address.withTheData();
         addDelivery.withTheData();
