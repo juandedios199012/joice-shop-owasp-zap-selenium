@@ -13,9 +13,10 @@ public class AddProduct {
     ProductsPage productsPage = new ProductsPage();
     BasketPage basketPage = new BasketPage();
 
-    public void withTheData() {
+    public void withTheData() throws InterruptedException {
         logger.info("Se encuentra en la Clase: " + getClass().getName());
 
+        Thread.sleep(6000);
         logger.info("Agregar Producto");
         productsPage.addBasketButton.isVisibility();
         productsPage.addBasketButton.click();
@@ -23,17 +24,9 @@ public class AddProduct {
         logger.info("Click en el Boton Basket");
         productsPage.basketButton.isVisibility();
         productsPage.basketButton.click();
-
-        /*logger.info("Cerrar Alerta de Seleccion de Producto");
-        String alertText=productsPage.closeToast.getTextElement();
-        if (alertText.equals("X")){
-            productsPage.closeToast.click();
-            productsPage.closeToast.clickJavascript();
-        }*/
-
+        Thread.sleep(6000);
         logger.info("Click en el Boton checkout");
         basketPage.checkoutButton.isVisibility();
-        // basketPage.checkoutButton.isControlDisplayed();
         basketPage.checkoutButton.clickJavascript();
     }
 }
